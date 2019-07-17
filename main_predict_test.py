@@ -90,6 +90,9 @@ test_data = test_data.values.astype('float32')
 with chainer.using_config('train', False), chainer.using_config('enable_backprop', False):
     test_pred = production_net(test_data)
 
+# unit dataset and predicted value
+output_data = np.concatenate([test_data, test_pred.data], 1)
+
 # convert to pandas
 columns = ['HHATT','HHDEF','HAATT','HADEF','AHATT','AHDEF','AAATT','AADEF','W','D','L']
 output = pd.DataFrame(data=output_data, columns=columns, dtype='float64')
