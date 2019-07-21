@@ -1,3 +1,7 @@
+"""
+After learning all data, it generates prediction data for test data.
+"""
+
 import pandas as pd
 import numpy as np
 import chainer.optimizers

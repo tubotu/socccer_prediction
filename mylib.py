@@ -1,3 +1,7 @@
+"""
+It is a library used in "main_cross_validation.py" and "main_predict_test.py".
+"""
+
 import pandas as pd
 import pandas.core
 import chainer.optimizers

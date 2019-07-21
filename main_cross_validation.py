@@ -1,3 +1,8 @@
+"""
+Do cross validation.
+Please note that the data is using train and test together.
+"""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -33,7 +38,7 @@ y_val = mylib.making_y_val_data_list_for_kfold(s_data,split_num)
 # create optimizer
 optimizer = []
 net = []
-for i in range(10):
+for i in range(split_num):
     net.append(mylib.create_model_net(n_input,n_hidden,n_output))
     optimizer.append(mylib.create_model_optimizer(net[i],alpha))
 
@@ -105,8 +110,8 @@ results_valid_data_all = np.zeros(epoch+1)
 for i in range(split_num):   
     results_train_data_all += results_train_data[i]
     results_valid_data_all += results_valid_data[i]
-results_train_data_ave = results_train_data_all / 10
-results_valid_data_ave = results_valid_data_all / 10
+results_train_data_ave = results_train_data_all / split_num
+results_valid_data_ave = results_valid_data_all / split_num
 
 # output of objective function
 plt.plot(results_train_data_ave, label='train')  # set legend with label
