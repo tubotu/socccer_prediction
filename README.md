@@ -4,3 +4,8 @@
 サッカーの勝敗予測をDNNを用いて行います。
 
 詳しくはmain_jupyter_notebook.ipynb
+
+
+main_cross_validation.pyでipynbファイルのクロスバリデーション部分を実行します。
+main_predict_testで提出用のtestデータに対する予測データのテキストファイルを作成します。
+mylib.pyは上記二つのファイルで使用しているライブラリです。
