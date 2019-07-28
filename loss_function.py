@@ -7,8 +7,8 @@ def RPS(y_true, y_pred) -> float:
     """
     Calcurate loss by RPS.
     
-    @param y_true: the answer list of target variable. ex.)(0.6,0.3,0.1)
-    @param y_pred: the predict list of target variable. ex.)(0.4,0.4,0.2)
+    @param y_true: the answer list of target variable. ex.)[(1,0,0),(0,1,0)]
+    @param y_pred: the predict list of target variable. ex.)[(0.4,0.4,0.2),(0.2,0.5,0.3)]
     @return: the value of loss
     """
     output = 0.
