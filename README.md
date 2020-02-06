@@ -1,8 +1,6 @@
 # soccer_prediction
-使用しているデータは非公開としています。
-
 サッカーの勝敗予測をDNNを用いて行います。
-
+チームごとに設定された攻撃力、守備力の値を基に予測を行います。
 詳しくはmain_jupyter_notebook.ipynb
 
 
